@@ -7,6 +7,7 @@ EA compilada para MetaTrader 5, baseada no operacional Happy Scalp.
 - Inclui o binário `MQL5/Experts/NuvensHappyScalp.ex5`.
 - O código-fonte `.mq5` não foi recuperado nesta versão; portanto, este repositório não é um pacote-fonte recompilável.
 - Os parâmetros podem ser ajustados diretamente nas entradas da EA.
+- A configuração obrigatória está em [`docs/CONFIGURACAO_OBRIGATORIA_NUVENS_HAPPY_SCALP.md`](docs/CONFIGURACAO_OBRIGATORIA_NUVENS_HAPPY_SCALP.md).
 
 ## Configuração testada
 
@@ -14,19 +15,22 @@ EA compilada para MetaTrader 5, baseada no operacional Happy Scalp.
 - Timeframe de sinal: M30
 - Spread máximo: 0,50
 - Soft stop inicial: desligado
-- Trailing: ativação 0,70; distância 0,50
+- Trailing: ativação 1,50; distância 0,50
 - Break-even: desligado
 - Perda diária máxima: 4%
 - Drawdown máximo: 8%
 
 ## Backtest de referência
 
-Período: 01/01/2026 a 19/10/2026, depósito inicial de US$ 3.000.
+Período de referência: 01/01/2026 a 31/01/2026, depósito inicial de US$ 3.000.
 
-| Ativação | Distância | Resultado | Drawdown | Operações |
+| Ativação | Distância | Resultado líquido | Drawdown | Operações |
 |---:|---:|---:|---:|---:|
-| 0,50 | 0,30 | +78,48% | 7,95% | 970 |
-| 0,70 | 0,50 | +92,40% | 7,92% | 863 |
-| 0,90 | 0,70 | +95,54% | 7,93% | 681 |
+| 1,00 | 0,50 | +US$ 2.844,10 | 7,92% | 982 |
+| **1,50** | **0,50** | **+US$ 2.991,00** | 7,93% | 638 |
+| 1,50 | 0,75 | +US$ 2.937,90 | 7,91% | 635 |
+| 2,00 | 0,50 | +US$ 2.388,30 | 7,92% | 637 |
 
 Os resultados são históricos e não garantem aprovação em mesa proprietária. O teste contínuo registrou acionamento do limite de drawdown em algum momento; valide primeiro em demo.
+
+Relatórios HTML do Strategy Tester, gráficos e simulações estão na pasta [`research`](research/).

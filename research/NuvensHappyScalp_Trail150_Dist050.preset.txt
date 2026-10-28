@@ -1,0 +1,11 @@
+NuvensHappyScalp - preset recomendado
+
+Resultado de referência: NHS_2026_Trail150_Dist050.htm
+
+TrailActivation=1.50
+TrailDistance=0.50
+
+Observação: os demais parâmetros permanecem iguais aos parâmetros atuais da EA.
+O arquivo original disponível é somente NuvensHappyScalp.ex5, sem código-fonte .mq5;
+portanto não é possível alterar o default interno do binário. Este preset define o
+padrão recomendado para os testes e para configuração manual no MT5.
